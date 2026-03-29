@@ -1,3 +1,4 @@
+import { Search } from 'lucide-react'
 import React from 'react'
 
 const Companies = () => {
@@ -7,12 +8,16 @@ const Companies = () => {
                 <h3 className='text-2xl text-white font-bold'>Explore top companies</h3>
                 <p className='text-gray-300'>Find the company that matches your culture and goals</p>
 
-                <div className="py-2 px-4 w-full flex items-center justify-center">
+                <div className="relative w-full sm:w-[80%] md:w-[60%] lg:w-[40%] xl:w-[30%]">
+
                     <input
                         type="text"
-                        placeholder="Search company name..."
-                        className="w-full bg-white mx-auto sm:w-[80%] md:w-[60%] lg:w-[40%] xl:w-[30%] px-4 py-2 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#6C47FF]"
+                        placeholder="job title, company, skills"
+                        className="w-full bg-white px-10 py-2 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#6C47FF]"
                     />
+
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+
                 </div>
             </div>
 

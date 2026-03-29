@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from './Hero'
 import { Component, MonitorCheck, Settings, TabletSmartphone } from 'lucide-react'
+import { useDispatch } from 'react-redux'
+import { getJobs } from '../features/actions/jobs.action'
 
 const Home = () => {
+
     return (
         <div className=''>
             <Hero />
@@ -10,25 +13,25 @@ const Home = () => {
                 <h2 className='font-semibold'>Browse by category</h2>
 
                 <div className='py-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
-                    <div className='flex flex-col items-center justify-center gap-2 text-center outline rounded-2xl py-2'>
+                    <div className='flex hover:outline-2 hover:outline-indigo-400 outline-2 outline-gray-400 flex-col items-center justify-center gap-2 text-center outline rounded-2xl py-2 cursor-pointer'>
                         <MonitorCheck size={25} />
                         <h4 className='text-sm'>Frontend</h4>
                         <p className='text-gray-300'>320 jobs</p>
                     </div>
 
-                    <div className='flex flex-col items-center gap-2 text-center outline rounded-2xl py-2 justify-center'>
+                    <div className='flex flex-col hover:outline-2 hover:outline-indigo-400 outline-2 outline-gray-400 items-center gap-2 text-center outline rounded-2xl py-2 justify-center cursor-pointer'>
                         <Settings size={25} />
                         <h4 className='text-sm'>Backend</h4>
                         <p className='text-gray-300'>100 jobs</p>
                     </div>
 
-                    <div className='flex flex-col items-center gap-2 text-center outline rounded-2xl py-2 justify-center'>
+                    <div className='flex flex-col hover:outline-2 hover:outline-indigo-400 outline-2 outline-gray-400 items-center gap-2 text-center outline rounded-2xl py-2 justify-center cursor-pointer'>
                         <TabletSmartphone size={25} />
                         <h4 className='text-sm'>Mobile</h4>
                         <p className='text-gray-300'>280 jobs</p>
                     </div>
 
-                    <div className='flex flex-col items-center gap-2 text-center outline rounded-2xl py-5'>
+                    <div className='flex flex-col hover:outline-2 hover:outline-indigo-400 outline-2 outline-gray-400 items-center gap-2 text-center outline rounded-2xl py-5 cursor-pointer'>
                         <Component size={25} />
                         <h4 className='text-sm'>Design</h4>
                         <p className='text-gray-300'>140 jobs</p>
@@ -55,7 +58,7 @@ const Home = () => {
                         <hr />
                         <div className='flex items-center justify-between'>
                             <h5>15 LPA</h5>
-                            <button className="px-6 py-2 rounded-lg text-white font-medium bg-gradient-to-r from-[#6C47FF] to-[#FF6B9D] hover:opacity-90 transition duration-300">
+                            <button className="px-6 cursor-pointer py-2 rounded-lg text-white font-medium bg-gradient-to-r from-[#6C47FF] to-[#FF6B9D] hover:opacity-90 transition duration-300">
                                 Apply Now
                             </button>
                         </div>
@@ -76,7 +79,7 @@ const Home = () => {
                         <hr />
                         <div className='flex items-center justify-between'>
                             <h5>15 LPA</h5>
-                            <button className="px-6 py-2 rounded-lg text-white font-medium bg-gradient-to-r from-[#6C47FF] to-[#FF6B9D] hover:opacity-90 transition duration-300">
+                            <button className="px-6 py-2 cursor-pointer rounded-lg text-white font-medium bg-gradient-to-r from-[#6C47FF] to-[#FF6B9D] hover:opacity-90 transition duration-300">
                                 Apply Now
                             </button>
                         </div>
