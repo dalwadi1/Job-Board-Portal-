@@ -2,7 +2,7 @@ import React from 'react'
 
 const Companies = () => {
     return (
-        <div className='w-full'>
+        <div className='w-full h-full flex flex-col'>
             <div className='flex flex-col gap-3 items-center justify-center bg-gradient-to-br from-[#6C47FF] to-[#FF6B9D] p-2'>
                 <h3 className='text-2xl text-white font-bold'>Explore top companies</h3>
                 <p className='text-gray-300'>Find the company that matches your culture and goals</p>
@@ -16,8 +16,8 @@ const Companies = () => {
                 </div>
             </div>
 
-            <div className='flex'>
-                <div className='w-64 h-full py-5 px-3 overflow-y-scroll'>
+            <div className='flex flex-1 min-h-0'>
+                <div className='w-64 py-5 px-3 overflow-y-auto'>
                     <div className='py-2'>
                         <h3 className="font-semibold mb-3">Industry</h3>
                         <div className="space-y-2 text-sm flex flex-col px-4">
@@ -44,7 +44,7 @@ const Companies = () => {
                     </div>
                 </div>
 
-                <div className='bg-gray-300 w-full flex-1 py-5 h-[34vw] overflow-y-scroll'>
+                <div className='bg-gray-300 w-full flex-1 py-5 overflow-y-auto'>
                     <div className='py-2 grid grid-cols-1 sm:grid-cols-3 gap-3 px-3'>
                         <div className='flex flex-col gap-3 outline rounded-2xl py-3 px-3 cursor-pointer'>
                             <div className='flex gap-3'>

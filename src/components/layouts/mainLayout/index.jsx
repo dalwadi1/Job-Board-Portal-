@@ -4,11 +4,17 @@ import { Outlet } from 'react-router'
 
 const MainLayout = () => {
     return (
-        <div className='w-full min-h-screen'>
-            <div className='max-w-[91vw] mx-auto'>
-                <Navbar />
+        <div className='h-screen flex flex-col overflow-hidden'>
+            <div className='flex-shrink-0'>
+                <div className='max-w-[91vw] mx-auto'>
+                    <Navbar />
+                </div>
             </div>
-            <Outlet />
+
+            <div className='flex-1 overflow-hidden'>
+                <Outlet />
+            </div>
+
         </div>
     )
 }
